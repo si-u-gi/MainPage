@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>siugi.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #020617;
+      --text: #e5e7eb;
+      --sub: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Pretendard, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      padding: 32px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--sub);
+      font-size: 1.1rem;
+    }
+
+    .stack {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      border: 1px solid #334155;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+
+    .card {
+      background: rgba(2, 6, 23, 0.8);
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--sub);
+      font-size: 0.95rem;
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>siugi.dev</h1>
+      <p>Spring · Flutter · SQL을 공부하며 만드는 프로젝트 공간</p>
+
+      <div class="stack">
+        <span class="badge">Spring Boot</span>
+        <span class="badge">Flutter</span>
+        <span class="badge">MySQL</span>
+        <span class="badge">AWS</span>
+      </div>
+    </header>
+
+    <section class="projects">
+      <div class="card">
+        <h2>🍜 맛집 지도</h2>
+        <p>
+          Kakao Map 기반 맛집 수집 & 필터링 서비스.<br />
+          Spring Boot + JPA + MySQL + Flutter
+        </p>
+        <a href="https://map.siugi.dev">프로젝트 열기 →</a>
+      </div>
+
+      <div class="card">
+        <h2>⚙️ API 서버</h2>
+        <p>
+          맛집 데이터 제공 REST API.<br />
+          EC2 배포, RDS 연동, JPA 기반 설계
+        </p>
+        <a href="https://api.siugi.dev">API 접속 →</a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 siugi · Built with curiosity and coffee ☕
+    </footer>
+  </div>
+</body>
+</html>
